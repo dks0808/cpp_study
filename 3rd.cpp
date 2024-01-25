@@ -4,31 +4,32 @@
 
 using namespace std;
 
+int fun(int a, int b);
+
+int fun(int a);
+
+
+
 int main()
 {
-    const double PI = 3.141592653589793239462;
-    int n;
-    double s, peri, area;
-
-    do
-    {
-        cout << "변의 개수를 입력하세요(4이상의 정수): ";
-        cin >>n;
-
-    } while (n < 4);
-
-    do
-    {
-        cout << "변의 길이를 입력하세요 : ";
-        cin >> s;
-
-    } while (s <= 0.0);
+    cout <<"This is function 1 overloading test: " << fun(3,4) << endl;
+    cout <<"This is function 2 overloading test: " << fun(10) << endl;    
     
-    peri = n*s;
-    area = (n*pow(s,2))/(n*tan(PI/n));
-    cout <<"둘래 : "<<peri <<endl;
-    cout << "넓이 : " << area <<endl;
-
     return 0; 
     
 }
+//
+int fun(int a, int b)
+{ 
+    int c = a+b;
+    cout << c << endl ;
+    return 1;
+}
+
+int fun(int a)
+{
+    cout << ++a << endl;
+    return 2;
+
+}
+
