@@ -1,15 +1,7 @@
 #include <iostream>
 
-int minites(int s)
-{
-    int a = s * 60;
-    return a;
-}
-int hours(int s)
-{
-    int a = minites(s) * 60;
-    return a;
-}
+int minites(int s);
+int hours(int s);
 
 using namespace std;
 int main(){
@@ -25,9 +17,20 @@ int main(){
     
     int s1 = hours(h);
     int s2 = minites(h);
-    cout << "The hours: " << s1 << " s"<<endl; 
-    cout << "The minites: " << s2 <<" s"<<endl; 
-    cout << "The seconds: " << s3<<" s"<<endl; 
+    cout << "The time: " << s1 << " s"<<endl; 
+    cout << "The time: " << s2 <<" s"<<endl; 
+    cout << "The timeu: " << s3<<" s"<<endl; 
 
     return 0;
+}
+
+int minites(int s)
+{
+    int a = s * 60;
+    return a;
+}
+int hours(int s)
+{
+    int a = minites(s) * 60;
+    return a;
 }
