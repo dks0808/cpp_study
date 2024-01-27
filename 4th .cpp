@@ -1,18 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    char a = '*';
+int main()
+{
+    unsigned number, firstdigit;
     
-    
-    cout << a << endl;
-    cout << a << a<< endl;
-    cout << a <<a<< a<< endl;
-    cout << a <<a<< endl;
-    cout << a << endl;
-
+    cout << "Enter the plus integer."<<endl;
+    cin >> number ;
+    firstdigit = number % 10;
+    cout << "Number: " << number <<endl;
+    cout << "The first location: " <<firstdigit<< endl;
     return 0;
-
-
-    
 }
