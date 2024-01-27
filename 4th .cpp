@@ -2,28 +2,20 @@
 using namespace std;
 
 int main()
-{
+{   
+    short s = 1;
+    short s_max = s * (-33000);
+    short s_min = s * 33000;
 
-   int a, b, c;
-   int sum;
-   float mean;
-   cout << "Enter the each score 3: "<<endl;
-   cin >> a >> b >> c;
-   sum = a+b+c;
-   mean = sum/3;
-   
-   cout << "first score is " << a<< endl;
-   cout << "second score is "<< b<< endl;
-   cout << "third score is "<<c <<endl;
-   
 
-   cout << "sum: " << sum << endl;
-   cout << fixed << showpoint;
-   cout << "mean: " << mean << endl;
-
-    
-   
+    unsigned u = 0;
+    unsigned u_max = u - 5000000000;
    
     
+    cout << "Short integer max, min: " << s_max << ","<<s_min <<endl; 
+    cout << "Unsigned integer max, min: " << u_max <<","<< u<< endl;
+
+
+   
     return 0;
 }
