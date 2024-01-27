@@ -3,12 +3,17 @@ using namespace std;
 
 int main()
 {
-    unsigned number, firstdigit;
-    
-    cout << "Enter the plus integer."<<endl;
-    cin >> number ;
-    firstdigit = number % 10;
-    cout << "Number: " << number <<endl;
-    cout << "The first location: " <<firstdigit<< endl;
+   unsigned seconds, hours, minutes;
+   cout << "Enter seconds: " ;
+   cin >> seconds;
+   
+   hours = seconds/3600;
+   minutes = seconds/60;
+
+   cout << "time : " << seconds<<" s"<<endl;
+   cout << "hours : " << hours<<" h"<<endl;
+   cout << "minutes : " << minutes<<" m"<<endl;
+   cout << "seconds : " << seconds<<" s"<<endl;
+
     return 0;
 }
