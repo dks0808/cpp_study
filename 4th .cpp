@@ -3,17 +3,19 @@ using namespace std;
 
 int main()
 {
-   unsigned seconds, hours, minutes;
-   cout << "Enter seconds: " ;
-   cin >> seconds;
+   unsigned durations, hours, minutes, seconds;
+   cout << "Enter duration time: " ;
+   cin >> durations ;
    
-   hours = seconds/3600;
-   minutes = seconds/60;
+   hours = durations/3600;
+   minutes = (durations-(hours*3600))/60;
+   seconds = durations -(hours*3600)-(minutes*60);
+   
 
-   cout << "time : " << seconds<<" s"<<endl;
-   cout << "hours : " << hours<<" h"<<endl;
-   cout << "minutes : " << minutes<<" m"<<endl;
-   cout << "seconds : " << seconds<<" s"<<endl;
+   cout << "duration time : " << durations<<" s" <<endl ;
+   cout <<  hours<<"h ";
+   cout <<  minutes<<"m ";
+   cout << seconds<<"s "<<endl;
 
     return 0;
 }
