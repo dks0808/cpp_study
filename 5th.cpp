@@ -5,34 +5,29 @@ using namespace std;
 
 int main()
 {
-    int n;
-    int score;
-    double mean;
-    int counter;
-    int sum = 0;
-    cout << "Enter the how may subjects: " ;
-    cin >> n;
-    
-    while(counter<=n)
+    int n; 
+    long double number;
+
+    do
     {
-        cout << "Enter the score: " ;
-        cin >> score;
-        if(score >= 0)
-        {
-            sum = sum + score;
-            counter++;
-        }
-        else
-        {
-            cout << "score only 0~100 try again" << endl;
-        }
+        cout << "Enter the repeat number: "<< endl;
+        cin >> n;
+    } while (n <= 0);
 
-
-    }
-    mean = static_cast<double>(sum)/counter;
-    cout << fixed << setprecision(3) << showpoint;
-    cout << "Your score averge : " << mean ;
+    long double sum = 0;
+    long double tsum = 1;   
+    
+    for(int count = 0; count < n; count++)
+    {
+        cout << "Enter the numbers which you want : "<< endl;
+        cin >> number;
+        sum = sum + number;
+        tsum = tsum * number;
+    } 
+    
+    cout << fixed << setprecision(5) << showpoint;
+    cout << "Sum of numbers that you entered : " << sum << endl;
+    cout << "Product of numbers that you entered : " << tsum << endl;
 
     return 0;
-
 }
