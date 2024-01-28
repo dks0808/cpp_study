@@ -16,9 +16,9 @@ int main()
         
     } while (base == 0);
 
-    if (exponent<0)
+    if (exponent < 0)
     {
-        for(int i = 0; exponent> i; i++)
+        for(int i = 0; -exponent> i; i++)
         {
             power = power / base;
         }
@@ -32,7 +32,7 @@ int main()
         }
     }
 
-    else
+    else if (exponent==0)
     {
         cout << "power is \'1\' ";
     }  
