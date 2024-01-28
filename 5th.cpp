@@ -5,18 +5,40 @@ using namespace std;
 
 int main()
 {
+    int base, exponent ;
     
-    unsigned long long Factorial=1; 
-    int n ;
-    cout << "Enter the number you want: ";
-    cin >> n;
-
-    for(int i = 1; i<=n; i++)
+    long double power=1;
+    
+    do
     {
+        cout << "Enter the base & exponent number: ";
+        cin >> base >> exponent;
         
-        Factorial *=i;
+    } while (base == 0);
+
+    if (exponent<0)
+    {
+        for(int i = 0; exponent> i; i++)
+        {
+            power = power / base;
+        }
     }
 
-    cout << n <<"! = " <<Factorial<< endl;
+    else if (exponent>0)
+    {
+        for (int i = 0; exponent > i; i++)
+        {
+            power = power * base;
+        }
+    }
+
+    else
+    {
+        cout << "power is \'1\' ";
+    }  
+    cout << fixed << setprecision(3) << showpoint;
+    cout << "Entered the base number : " << base <<endl;
+    cout << "Entered the exponent number : " << exponent<< endl;
+    cout << "Power of entered base & exponenet : " << power ;
     return 0;
 }
