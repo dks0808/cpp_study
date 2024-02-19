@@ -1,15 +1,22 @@
 #include <iostream>
 using namespace std;
 
-
 int main()
 {
-    int a, b;
-    cin >> a >>b
-    arrary
-    for(int i = 0; i <=a ; i++)
+    int a, b, c;
+    cin >> a >> b;
+    int cap[a];
+    for(int i = 0; i <a ; i ++)
     {
-        cin >>
+        cin >> c;
+        cap[i] = c;
     }
-    return 0;
+    for(int i = 0; i < a; i++)
+    {
+        if(cap[i]<b)
+        {
+            cout << cap[i] << " ";
+        }
+    }
 }
+
