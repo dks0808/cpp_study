@@ -3,23 +3,39 @@ using namespace std;
 
 int main()
 {
-    int p ;
-    int n = 30;
-    int arr[n] = {};
-    
-
-    for(int i = 0; i <28; i++)
+    int a = 10;
+    int arr[a] ;
+    int count = 0;
+    for(int i = 0; i < a; i++)
     {
+        int p;
         cin >> p;
-        arr[p-1] = p;
+        int a = p%42;
+        arr[i] = a;
     }
-    for(int i = 1; i<=n; i++)
-    {
-        if(arr[i-1] != i)
-            cout << i <<endl;
-    }
-   
 
+    for(int i = 0; i < a; i++)
+    {
+        for(int x =0; x <a; x++)
+        {
+            if(arr[i]<arr[x])
+            {
+                int temp = arr[i];
+                arr[i] = arr[x];
+                arr[x] = temp;
+            }
+        }
+    }
+    for(int i = 0; i <a; i++)
+    {
+        if(arr[i] != arr[i+1])
+            count ++;
+    }
+    cout <<  count;
+
+    for(int i = 0; i <a; i++)
+        cout << arr[i];
+        
     return 0;
     
 }
