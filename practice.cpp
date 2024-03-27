@@ -1,38 +1,33 @@
 #include <iostream>
-#include <string>
+#include <algorithm>
 using namespace std;
-int main()
-{
+
+int logsort(int *arr, int b, int c){
+    int pivot, b_temp, c_temp;
+    b_temp = b;
+    c_temp = c;
+    pivot = arr[c];
+    while(b<c){
+        while(arr[b] >= pivot &(b<c)){
+            c--;
+        }
+        if(b!=c){
+            arr[b] = arr[c];
+        }
+        while(arr[b]<=arr[c])
+    }
+
+}
+
+
+int main(){
     int N;
-    int xmin, ymin ; 
-    int xmax, ymax = 0;
-    int x,y;
     cin >> N;
-    int arrx[N];
-    int arry[N];
-
-    for(int i = 0; i < N ; i++)    
-        cin >> arrx[i] >> arry[i];
-
-    for(int i = 0; i < N ; i++)
-    {    
-        if(arrx[i]>xmax)
-            xmax = arrx[i];
-        if(arry[i] > ymax)
-            ymax =arry[i];
-    }
-    int colx = xmax;
-    int rowy = ymax;
-    int arrxy[rowy][colx];
-
-    for(int i = rowy-1 ; i>=0; i--)
-    {
-        for(int j = 0; j < colx; j++)
-            arrxy[i][j] = 
-    }
-
-
-    // array reset and size declear
-    
+    int arr[N];
+    for(int i =0; i<N; i++)
+        cin >> arr[i];
+    logsort();
+    for(int i =0; i< N; i++)
+        cout << arr[i] << endl;
     return 0;
 }
