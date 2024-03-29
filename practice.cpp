@@ -1,33 +1,37 @@
 #include <iostream>
-#include <algorithm>
+
 using namespace std;
-
-int logsort(int *arr, int b, int c){
-    int pivot, b_temp, c_temp;
-    b_temp = b;
-    c_temp = c;
-    pivot = arr[c];
-    while(b<c){
-        while(arr[b] >= pivot &(b<c)){
-            c--;
-        }
-        if(b!=c){
-            arr[b] = arr[c];
-        }
-        while(arr[b]<=arr[c])
-    }
-
-}
-
-
 int main(){
     int N;
     cin >> N;
-    int arr[N];
-    for(int i =0; i<N; i++)
-        cin >> arr[i];
-    logsort();
+    int arr1[N][2];
     for(int i =0; i< N; i++)
-        cout << arr[i] << endl;
+        cin >> arr1[i][0] >> arr1[i][1];
+    for(int i =0; i<N; i++){
+        for(int j =i+1; j<N; j++){
+            if(arr1[i][0] > arr1[j][0]){
+                int temp1 = arr1[i][0];
+                arr1[i][0] = arr1[j][0];
+                arr1[j][0] = temp1;
+                int temp2 = arr1[i][1];
+                arr1[i][1] = arr1[j][1];
+                arr1[j][1] = temp2;
+            }
+            else if(arr1[i][0]==arr1[j][0] && arr1[i][1] > arr1[j][1]){
+                    int temp1 = arr1[i][0];
+                    arr1[i][0] = arr1[j][0];
+                    arr1[j][0] = temp1;
+                    int temp2 = arr1[i][1];
+                    arr1[i][1] = arr1[j][1];
+                    arr1[j][1] = temp2;
+            }
+        }
+    }
+    
+    for(int i =0; i <N; i++){
+        for(int j =0; j<2; j++)
+            cout << arr1[i][j] <<" ";
+        cout << endl;
+    }
     return 0;
 }
